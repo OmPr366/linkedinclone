@@ -1,0 +1,48 @@
+.card1{
+    width:  210px;
+    margin-left: 65px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+
+.coverpic{
+    width: 100%;
+    height: 50px;
+    
+}
+
+.coverImg{
+    width: 100%;
+    z-index: -20;
+}
+.coverpic img {
+    max-width: 100%;
+    height: 100%;
+    z-index: -12;
+}
+.proImage {
+    width: 60px;
+    height: 60px;
+    margin-top: -29px;
+    
+    z-index: 999;
+}
+.proImage img  {
+    width: 100%;
+    height: 100%;border: 2px solid white;
+    
+    
+}
+
+.recentCard{
+    margin-top: 308px;
+    background-color: #fff;
+    width: 210px;
+    margin-left: 65px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    /* margin-left: -135px; */
+}
+

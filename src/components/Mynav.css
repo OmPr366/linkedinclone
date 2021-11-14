@@ -1,0 +1,59 @@
+.myNav{
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.centerMain{
+    max-width: 1155px;
+    min-width: 700px;
+    width: 100%;
+}
+.op:hover{
+    color: rgb(0, 0, 0);
+}
+
+.notActive {
+    color: rgb(117, 114, 114);
+    
+}
+.notActive:hover {
+    color: rgb(0, 0, 0); 
+}
+.home {
+    cursor: pointer;
+}
+.home:hover {
+    color: rgb(0, 0, 0);
+}
+/* .input{
+    /* background-color: #007efc; */
+    /* background-color: #eef3f8; */
+.input .searchIcon{
+    margin-right: -33px;
+    z-index: 1;
+    
+}
+
+.input input{
+    /* background-color: #007af5; */
+    background-color: #eef3f8;
+}
+input:focus {
+    border: 1px solid #1670BE;
+    box-shadow: 0 0 3px #1670BE;
+    outline-offset: 0px;
+    outline: none;
+    border: none;
+}
+
+.tryPremium {
+    cursor: pointer;
+    color: #5d3b09;
+}
+.tryPremium:hover {
+    cursor: pointer;
+    color: #5d3b09;
+}
+.tryPremium a:hover {
+    border-bottom: 1px solid black;
+}
