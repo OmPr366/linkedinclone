@@ -6,7 +6,7 @@ import BookmarkIcon from "@mui/icons-material/Bookmark";
 const SideProfile = () => {
     return (
       <>
-        <div className="fixed card1 flex justify-center flex-col items-center rounded-lg mt-1">
+        <div className="fixed top-16 card1 flex justify-center flex-col items-center rounded-lg mt-1">
           <div className="coverpic ">
             <img className="coverImg rounded-t-lg" src={cover} alt="" />
           </div>
@@ -44,7 +44,7 @@ const SideProfile = () => {
           {/* <div className=" line border-b-2 border-gray-100 w-full"></div> */}
         </div>
 
-        <div className="mt-3 pt-3 fixed recentCard text-sm flex flex-col justify-start rounded-lg ">
+        <div className="mt-8 pt-3 fixed recentCard text-sm flex flex-col justify-start rounded-lg ">
           <div className="title text-base px-1 ">Recent</div>
           <div className="alltags ">
             <div className="tag1 hover:bg-gray-200 pt-1 w-full px-2 cursor-pointer">

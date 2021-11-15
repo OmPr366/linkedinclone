@@ -1,5 +1,5 @@
 .card1{
-    width:  210px;
+    width:  230px;
     margin-left: 65px;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
@@ -37,9 +37,9 @@
 }
 
 .recentCard{
-    margin-top: 308px;
+    margin-top: 357px;
     background-color: #fff;
-    width: 210px;
+    width: 230px;
     margin-left: 65px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;

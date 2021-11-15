@@ -16,7 +16,7 @@ import Bar from './Bar';
 
 const Mynav = () => {
     return (
-      <div className="myNav  py-1 w-screen flex justify-center items-center h-14  ">
+      <div className="myNav fixed top-0 left-0  py-1 w-screen flex justify-center items-center h-14  ">
         <div className="centerMain flex justify-between  items-center ">
           <div className="search flex items-center">
             <div className="icon flex items-center">
