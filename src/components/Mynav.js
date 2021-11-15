@@ -9,8 +9,6 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import SearchIcon from "@mui/icons-material/Search";
 import AppsIcon from "@mui/icons-material/Apps";
-
-
 import { blue } from "@mui/material/colors";
 import Bar from './Bar';
 

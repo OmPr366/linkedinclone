@@ -12,17 +12,11 @@ const PostCard = ({ photoUrl, name, about, message }) => {
       <div className="titleOfCard   flex justify-between px-3 ">
         <div className="mainPostCard flex">
           <div className="inputImageIcon rounded-full">
-            <img
-              className=" rounded-full"
-              src={photoUrl}
-              alt=""
-            />
+            <img className=" rounded-full" src={photoUrl} alt="" />
           </div>
           <div className="postCardTitle ml-2 text-xs">
             <div className="name font-bold">{name} </div>
-            <div className="about font-light">
-              {about}
-            </div>
+            <div className="about font-light">{about}</div>
             <div className="time flex font-light items-center ">
               <font className="mr-1 -mt-1">1hr</font>{" "}
               <PublicIcon sx={{ fontSize: 15 }} />
@@ -30,7 +24,6 @@ const PostCard = ({ photoUrl, name, about, message }) => {
           </div>
         </div>
         <div className="optionPostCard  justify-end ">
-          
           <MoreVertIcon />
         </div>
       </div>
@@ -41,23 +34,23 @@ const PostCard = ({ photoUrl, name, about, message }) => {
       </div>
 
       <div className="lineLike  "></div>
-      <div className="optionsLike w-full px-3 mt-3">
-        <button className="hover:bg-gray-200 w-1/4 py-2 rounded-sm ">
+      <div className="optionsLike w-full px-3 mt-3 flex justify-center items-center">
+        <button className="hover:bg-gray-200 w-1/4 py-2 rounded-sm flex justify-evenly  items-center ">
           {" "}
           <ThumbUpAltOutlinedIcon />
-          Like
+          <div className="likeComm -ml-7">Like</div>
         </button>
-        <button className="hover:bg-gray-200 w-1/4 py-2 rounded-sm ">
+        <button className="hover:bg-gray-200 w-1/4 py-2 rounded-sm flex justify-evenly  items-center ">
           <ModeCommentOutlinedIcon />
-          Comment
+          <div className="likeComm -ml-2">Comment</div>
         </button>
-        <button className="hover:bg-gray-200 w-1/4 py-2 rounded-sm ">
+        <button className="hover:bg-gray-200 w-1/4 py-2 rounded-sm flex justify-evenly items-center ">
           <ShareIcon />
-          Share
+          <div className="likeComm -ml-7">Share</div>
         </button>
-        <button className="hover:bg-gray-200 w-1/4 py-2 rounded-sm ">
+        <button className="hover:bg-gray-200 w-1/4 py-2 rounded-sm flex justify-evenly  items-center ">
           <SendIcon />
-          Send
+          <div className="likeComm -ml-7">Send</div>
         </button>
       </div>
     </div>

@@ -1,19 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Feed.css'
 import ImageIcon from "@mui/icons-material/Image";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import TodayIcon from "@mui/icons-material/Today";
 import ArticleIcon from "@mui/icons-material/Article";
-import Posts from './Posts';
 
 import firebase from 'firebase';
 import { db } from '../Firebase';
+import PostCard from './PostCard';
 
 const FeedInput = () => {
     const [postData, setPostData] = useState("")
     const [posted, setPosed] = useState(0);
+    const [postArray, setPostArray] = useState([]);
     const submitPost= (e)=>{
-      setPosed(1);
+      e.preventDefault();
+      
       // e.preventDefault();
       // alert(postData);
       db.collection("posts").add({
@@ -24,10 +26,23 @@ const FeedInput = () => {
         timeStamp : firebase.firestore.FieldValue.serverTimestamp()
       });
       setPostData("");
-      
-      
+      setPosed(1);
+      setInterval(() => {
+        setPosed(0);
+      }, 2000);
       
     }
+
+    useEffect(() => {
+      db.collection("posts").orderBy("timeStamp","desc").onSnapshot(snapshot=>{
+        setPostArray(snapshot.docs.map(doc=>({
+          id : doc.id,
+          data : doc.data()
+        })))
+      });
+      
+    },[])
+    console.log(postArray);
     return (
       <>
         <div className="inputFeed bg-white rounded-xl px-4 py-2 mt-16  ">
@@ -81,12 +96,27 @@ const FeedInput = () => {
         {/* <div > Posting.... <div/> */}
         <div
           className={`${
-            posted == 1 ? "bg-gray-300 posted w-9 mt-4 mb-4 h-11 rounded-md" : ""
+            posted == 1
+              ? "bg-gray-300 posted w-9 mt-4 mb-4 h-11 rounded-md"
+              : ""
           }  `}
         >
           {posted == 1 ? "Posting...." : ""}
         </div>
-        <Posts />
+        <div className="allPosts flex flex-col">
+          {postArray.map((element) => {
+            return (
+              <PostCard
+                photoUrl={element.data.photoUrl}
+                name={element.data.name}
+                about={element.data.desc}
+                message={element.data.message}
+              />
+            );
+          })}
+        </div>
+
+        {/* <Posts postArray={postArray} /> */}
       </>
     );
 }
