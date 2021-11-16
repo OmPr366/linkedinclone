@@ -39,8 +39,8 @@
     background-color: #eef3f8;
 }
 input:focus {
-    border: 1px solid #1670BE;
-    box-shadow: 0 0 3px #1670BE;
+    border: 1px solid #0162c5;
+    box-shadow: 0 0 3px #0162c5;
     outline-offset: 0px;
     outline: none;
     border: none;
